@@ -15,7 +15,7 @@
     <!--?  CHANGE THE HREF BASED ON WHERE YOU HOST  -->
   <!-- <base href="https://askavinraja.github.io/FletoTrack/"> -->
 
-  <base href="/">
+  <base href="https://askavinraja.github.io/Dyna"/>
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -28,6 +28,9 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="gallery">
   <link rel="apple-touch-icon" href="icons/logo.png">
+
+  <meta name='viewport' content='width=device-width, height=device-height, initial-scale:1, user-scalable=no' />
+
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" sizes="32x32"/>
@@ -47,11 +50,21 @@
     }
 
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = '934067200';
+    var serviceWorkerVersion = '3448728145';
   </script>
   <script src="flutter.js" defer></script>
+  
 </head>
 <body >
+  <script>
+    // This prevents zooming in using CTRL + mouse wheel.
+    // See https://stackoverflow.com/a/67039291/6509751.
+    document.addEventListener('wheel', function(e) {
+      e.ctrlKey && e.preventDefault();
+    }, {
+      passive: false,
+    });
+  </script>
 
   <div id="loading">
     <style>
